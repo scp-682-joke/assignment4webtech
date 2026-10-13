@@ -9,12 +9,39 @@
     <body>
         <nav class="site-header">
             <ul class="navigation-bar">
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="index.html" aria-current="page">Part 1</a></li>
                 <li><a href="../part2/index.html">Part 2</a></li>
                 <li><a href="../part3/index.html" >Part 3</a></li>
                 <li><a href="../part4/index.html">Part 4</a></li>
             </ul>
         </nav>
-        <script src="" async defer></script>
+        <div class="content">
+            <h1>Simple form</h1>
+            <form class="plain-form" id="form1" action="#" method="post">
+        <div class="field">
+            <label for="name">Name (required, 2-40 characters)</label>
+            <input type="text" id="name" name="name" pattern="\+?[a-zA-Z]{10,12}" title="Use 3–40 characters, letters and spaces only">
+        </div>
+
+        <div class="field">
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" required maxlength="60">
+        </div>
+
+        <div class="field">
+            <label for="phone">Phone (optional, 10-12 digits)</label>
+            <input type="tel" id="phone" name="phone" pattern="\+?[0-9]{10,12}" title="10 to 12 digits, for example +77011234567">
+        </div>
+
+        <div class="field">
+            <label for="message">Message (required, 10-300 characters)</label>
+            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="300"></textarea>
+        </div>
+
+        <button type="submit">Send</button>
+        </form>
+        </div>
+        <footer class="site-footer"><p>Zhibek Slambek | SE-2530</p></footer>
     </body>
 </html>

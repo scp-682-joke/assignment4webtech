@@ -1,11 +1,12 @@
 :root {
     color-scheme: dark;
-    --background: #193043;
-    --surface: #486a81;
-    --border: #373f44;
-    --text: #c8eaef;
-    --muted: #4e99a6;
-    --accent: #ffffff;
+    --background: #d9d9d9;
+    --border: #e9cdcdfb;
+    --surface: #8b1e1e;
+    --text: #3d3d3d;
+    --muted: #c33434;
+    --accent: #8f1414;
+    --field: #931f1fc9;
 }
 
 * {
@@ -37,7 +38,7 @@ h2 {
     list-style: none;
     gap: 8px;
     margin: 0;
-    padding: 0;
+    padding: 8px;
 }
 
 .navigation-bar a {
@@ -46,25 +47,39 @@ h2 {
     border-radius: 6px;
     text-decoration: none;
     font-size: 0.85rem;
-    color: var(--muted);
+    color: white;
+    font-weight: bold;
 }
 
 .navigation-bar a:hover {
-    background: var(--surface);
-    color: var(--text);
+    color: #f4e2e2;
+    background-color: var(--muted);
 }
-
 .navigation-bar a[aria-current="page"] {
-    background: var(--accent);
-    color: var(--background);
-}
-.navigation-bar li {
-    display: inline-block;
-    margin: 0 25px;
+    background: var(--border);
+    color: var(--accent);
 }
 
-.site-header, .site-footer {
-    justify-content: center;
+.header {
+    background-color: var(--surface);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 42px;
+    margin: 0;
+}
+
+.header h3 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.site-header, .site-footer, .navigation-bar {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -75,7 +90,64 @@ h2 {
 }
 
 .site-header {
-    padding: 10px 6%;
-    border-bottom: 1px solid var(--border);
+    background-color: #8e2525;
+    border-bottom: 2px solid var(--border);
+    justify-content: right;
+    padding: 0 6%;
     flex-direction: row;
+}
+
+.site-footer{
+    background-color: var(--surface);
+    border-top: 2px solid var(--border);
+    color: white;
+    justify-content: center;
+    margin-top: auto;
+    padding: 5px 6%;
+}
+
+.content {
+    max-width: 900px;
+    min-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+}
+
+
+.plain-form {
+    max-width: 520px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.plain-form .field {
+    margin-bottom: 14px;
+}
+
+.plain-form label {
+   display: block;
+    margin-bottom: 4px;
+   font-weight: bold;
+}
+
+.plain-form input,
+.plain-form textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid var(--text);
+    font-size: 16px;
+    font-family: inherit;
+  
+    background-color: var(--field); 
+    color: white;            
+    border: 2px solid var(--accent);    
+    border-radius: 5px; 
+}
+
+.plain-form button {
+    background-color: var(--surface);
+    padding: 8px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
