@@ -24,14 +24,12 @@ body {
     flex-direction: column;
 }
 
-h1 {
+.content > h1 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
+    font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.4rem;
+    margin: 20px 0 25px;
 }
 
 .navigation-bar {
@@ -105,30 +103,36 @@ h2 {
     margin-top: auto;
     padding: 5px 6%;
 }
+.site-footer p {
+    margin: 0;
+    line-height: 24px;
+}
 
 .content {
-    max-width: 900px;
-    min-width: 800px;
+    width: 900px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 30px;
     background-color: white;
+    flex: 1;
 }
 
 
 .plain-form {
-    max-width: 520px;
+    width: 100%;
     border: 1px solid #ccc;
     padding: 20px;
 }
 
 .plain-form .field {
-    margin-bottom: 14px;
+    margin-bottom: 25px;
+    gap: 20%;
 }
 
-.plain-form label {
-   display: block;
+.plain-form label, .bootstrap-form label {
+    display: block;
     margin-bottom: 4px;
-   font-weight: bold;
+    font-weight: bold;
 }
 
 .plain-form input,
@@ -138,16 +142,26 @@ h2 {
     border: 1px solid var(--text);
     font-size: 16px;
     font-family: inherit;
-  
-    background-color: var(--field); 
-    color: white;            
+    background-color: white;
+    color: var(--text);
     border: 2px solid var(--accent);    
     border-radius: 5px; 
 }
 
-.plain-form button {
+.plain-form button, .bootstrap-form button {
     background-color: var(--surface);
     padding: 8px 20px;
     font-size: 16px;
     cursor: pointer;
+}
+
+.bootstrap-form button:hover{
+    color: #f4e2e2;
+    background-color: var(--muted);
+}
+
+.bootstrap-form {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 20px;
 }
