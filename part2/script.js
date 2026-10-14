@@ -32,12 +32,3 @@ fields.forEach(function (input) {
     }
   });
 });
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  let allGood = true;
-  fields.forEach(function (input) {
-    if (!checkField(input)) allGood = false;
-  });
-  okBox.classList.toggle("d-none", !allGood);
-});
